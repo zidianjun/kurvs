@@ -37,9 +37,7 @@ class DataProd(object):
         self.kpc_per_pix = self.kpc_per_arc * c.arcsec_per_pix
         x = rad_bin[:-1] + .5 * np.diff(rad_bin)[0]
         self.x = x * self.kpc_per_arc
-
-        self.HaFWHM = u.read_FWHM(gal_name)
-
+        
 
     def _read_band(self, band):
         return u.read_band(self.gal_name, band)
