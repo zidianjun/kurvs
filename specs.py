@@ -16,7 +16,7 @@ def Gaussian(x, amp, center, sig):
 
 class SpecFit(object):
     # For the sake of using the global variable 'band'.
-    def __init__(self, spec, band, redshift, rest_frame=False, HaFWHM=0):
+    def __init__(self, spec, band, redshift, rest_frame=False):
         self.spec_obs = spec
         if redshift == 0:
             self.spec_rest = spec
