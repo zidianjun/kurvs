@@ -116,11 +116,6 @@ def get_grad_Gillman():
     df = pd.read_csv(data_path + 'ref_data/GillmanMG.csv')
     return df['met_grad'], df['e_met_grad']
 
-def get_OH_NO_Belfiore():
-    inner = pd.read_csv(data_path + 'ref_data/BelfioreNO_inner.csv')
-    outer = pd.read_csv(data_path + 'ref_data/BelfioreNO_outer.csv')
-    return .5 * (inner['x'] + outer['x']), .5 * (inner['y'] + outer['y'])
-
 def read_grad(gal_name, label, bin_width=0.5):
     df = pd.read_csv(output_path + 'met_grads_radbin' + str(bin_width) + '.csv')
     return df[df.name == gal_name].iloc[0, df.columns.get_loc(label)]
