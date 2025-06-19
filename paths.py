@@ -1,5 +1,5 @@
 
-proj_path = '/Users/zefengli/Desktop/project/kurvs/'
+proj_path = './'
 data_path = proj_path + 'data/'
 
 output_path = proj_path + 'output/'
